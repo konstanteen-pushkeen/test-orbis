@@ -6,5 +6,26 @@
 }
 
 body, #root, .leaflet-container {
-  height: 100vh;  
+  height: 100vh;   
+}
+
+table {    
+  position: absolute;   
+ /*  width: 80vw;  */ 
+  bottom: 0;     
+  background-color: #c4c4c4; 
+  border: 1px solid #fff;  
+  z-index: 400;
+}
+
+caption {
+  width: 100%;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayOn {
+  display: block;
 }

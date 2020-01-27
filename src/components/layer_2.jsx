@@ -1,7 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
 import { GeoJSON, FeatureGroup, Popup } from 'react-leaflet';
-import { Marker } from 'leaflet';
 
 class GeojsonLayer_2 extends Component {
   constructor(props) {
@@ -28,7 +27,7 @@ class GeojsonLayer_2 extends Component {
     );
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     if (this.props.url) {
       console.log(this.props.url);
       this.fetchData(this.props.url);
@@ -36,12 +35,12 @@ class GeojsonLayer_2 extends Component {
     console.log('did mount');
   }
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     console.log('will unmount');
 
   }
 
-  fetchData(url) {
+  fetchData = (url) => {
     let request = fetch(url);
     request
       /* .then(r => r.text())
