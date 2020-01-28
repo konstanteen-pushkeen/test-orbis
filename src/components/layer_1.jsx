@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
-import { GeoJSON, FeatureGroup, Popup } from 'react-leaflet';
+import { FeatureGroup } from 'react-leaflet';
+import GeoLayer from './GeoLayer';
 
 
 class GeojsonLayer_1 extends Component {
@@ -18,10 +19,15 @@ class GeojsonLayer_1 extends Component {
     return (
       <FeatureGroup>
         {data.map(f => {
-          return <GeoJSON key={f.id} data={f}>
-            <Popup>{f.properties.name}<br />{f.properties.adres}
-            </Popup>
-          </GeoJSON>
+          return <GeoLayer key={f.id}
+                           id={f.id}
+                           data={f}
+                           name={f.properties.name}
+                           address={f.properties.adres}
+                           activity={f.properties.vid_dejatelnosti}
+                           phone={f.properties.telefonfaks}
+                           mail={f.properties.jelektronnaja_pochta}></GeoLayer>          
+          
         })}
       </FeatureGroup>
     );

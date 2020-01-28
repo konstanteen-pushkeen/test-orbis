@@ -3,7 +3,8 @@ import { Component } from 'react';
 import { Map, TileLayer, LayersControl } from 'react-leaflet';
 import GeojsonLayer_1 from './layer_1';
 import GeojsonLayer_2 from './layer_2';
-import GeojsonLayer_3 from './layer_3';
+/* import GeojsonLayer_3 from './layer_3';
+import GeojsonLayer_sample from './layer_sample'; */
 
 class MapComponent extends Component {
     constructor(props) {
@@ -33,9 +34,10 @@ class MapComponent extends Component {
                         <GeojsonLayer_2 url="geojson_2.json"/>
                     </LayersControl.Overlay>
 
-                    <LayersControl.Overlay name="layer-3">
+                   {/*  <LayersControl.Overlay name="layer-3">
                         <GeojsonLayer_3 url="geojson_3.json"/>
-                    </LayersControl.Overlay>
+                    </LayersControl.Overlay> */}
+                    
                 </LayersControl>              
             </Map>
         );
